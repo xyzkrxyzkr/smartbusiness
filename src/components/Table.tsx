@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import type { RootState } from '../app/store.ts'
+import { AppDispatch, type RootState } from '../app/store.ts'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchUsers, setFilter } from '../features/table/tableSlice.ts'
 import './table.css'
 
 export default function Table() {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch<AppDispatch>()
 
     useEffect(() => {
       dispatch(fetchUsers())
