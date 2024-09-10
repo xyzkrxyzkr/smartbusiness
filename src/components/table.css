@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .table-wrapper {
+    width: 1200px; 
+    max-height: 80vh;
+    overflow: auto;
+    border-radius: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #141414;
+    color: lightgray;
+  }
+  
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #2f2f2f;
+  }
+  
+  th {
+    background-color: #1a1a1a;
+    font-weight: bold;
+    color: lightcyan;
+    text-transform: uppercase;
+  }
+  
+  tbody tr:hover {
+    background-color: #5c5c5c;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid lightslategray;
+    background-color: transparent;
+    color: lightslategray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: lightcyan;
+    box-shadow: 0 0 2px lightcyan;
+  }
+  
+  .loading, .error {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .error {
+    color: #d32f2f;
+  }
+  
+  .table-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  @media (max-width: 1020px) {
+    .table-container {
+      align-items: flex-start;
+      overflow-x: auto;
+    }
+    
+    .table-wrapper {
+      width: 100%;
+      max-width: none;
+    }
+  }
